@@ -9,7 +9,7 @@ class Solution:
         # Return result rounded to 4 decimal places as a list
         x = np.array(x)
         gamma = np.array(gamma)
-        rms = np.sqrt(np.mean(x**2 + eps))
+        rms = np.sqrt(np.mean(x**2) + eps)
         x_hat = x / rms
         y = gamma * x_hat
         return np.round(y, 4).tolist()
